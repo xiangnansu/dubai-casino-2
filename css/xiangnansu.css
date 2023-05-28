@@ -1,0 +1,408 @@
+.grid-container {
+	display: grid;
+	background-color: #eeeeee;
+	grid-template-columns: repeat(100,1vw);
+	grid-template-rows: repeat(100,1vh);
+}
+
+.grid-item-1 {
+	display: grid;
+	background-image: url("../img/01.png");
+	grid-template-columns: repeat(2, auto);
+	grid-column: 1/-1;
+	grid-row: 1/ 11;
+}
+
+	.grid-item-1 .nav-item {
+		display: grid;
+		white-space: nowrap;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.grid-item-1 .nav-link {
+		color: white;
+		font-size: 2.5vh;
+		margin: 8px;
+		padding: 0;
+	}
+
+	.grid-item-1 .active {
+		color: white;
+		text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+	}
+
+.grid-item-2 {
+	display: grid;
+	background-color: #1d517f;
+	grid-template-columns: 24vw 1vw 50vw 1vw auto;
+	grid-column: 1/-1;
+	grid-row: 11/ 16;
+}
+
+	.grid-item-2 div {
+		color: white;
+	}
+
+.grid-item-3 {
+	display: flex;
+	grid-column: 1/-1;
+	grid-row: 16/ 21;
+}
+
+	.grid-item-3 div {
+		display: flex;
+		border: 0;
+		border-top: 0.5vh solid;
+		border-top-color: #5793b6;
+		border-radius: 0;
+		font-size: 2.5vh;
+		padding: 0;
+		white-space: nowrap;
+		align-items: center;
+		background-color: #4a7c97;
+		height: 5vh;
+		flex-basis: 10%;
+		flex-shrink: 0;
+		color: white;
+		justify-content: center;
+	}
+
+.grid-item-4 {
+	display: flex;
+	grid-column: 1/16;
+	grid-row: 21/ 91;
+	overflow: hidden;
+	overflow-x: hidden;
+	font-size: 2.5vh;
+	flex-direction: column;
+}
+
+	.grid-item-4 div {
+		display: flex;
+		background-color: #d5d5d5;
+		border: 0;
+		border-top: 0.5vh solid;
+		border-top-color: #bbbbbb;
+		justify-content: start;
+		align-items: center;
+		width: 100%;
+		height: 5vh;
+		white-space: nowrap;
+	}
+
+	.grid-item-4 a,
+	.grid-item-4 a:visited,
+	.grid-item-4 a:hover,
+	.grid-item-4 a:active,
+	.grid-item-4 a:focus {
+		display: flex;
+		align-items: center;
+		height: 5vh;
+		color: black;
+		padding-left: 3vw;
+		width: 100%;
+	}
+
+	.grid-item-4 span {
+		color: #3fa381
+	}
+
+.grid-item-5 {
+	display: flex;
+	grid-column: 1/16;
+	grid-row: -11/ -1;
+	justify-content: center;
+	background-color: #eeeeee;
+}
+
+.grid-item-6 {
+	display: grid;
+	grid-column: 16/-1;
+	grid-row: 21/ 26;
+	background-color: #eeeeee;
+	grid-template-columns: 15% 25% 12% 12% 12% 12% auto;
+}
+
+	.grid-item-6 div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-left: 0.25vh solid;
+		border-left-color: #b4b4b4;
+		font-size: 2.5vh;
+	}
+
+.grid-item-7 {
+	display: flex;
+	grid-column: 16/-1;
+	grid-row: 26/ -1;
+	flex-direction: column;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+	.grid-item-7 button {
+		height: 6vh;
+		color: #4a7c97;
+		font-size: 2.5vh;
+		background-color: #bfdbea !important;
+		justify-content: start;
+		padding-left: 3vw;
+		border: 0;
+		text-align: left;
+		border-radius: 0;
+		border-bottom: 0.25vh solid;
+		border-bottom-color: white;
+	}
+
+		.grid-item-7 button:hover,
+		.grid-item-7 button:active,
+		.grid-item-7 button:focus {
+			color: #4a7c97 !important;
+			background-color: #bfdbea;
+			border-bottom: 0.25vh solid;
+			border-bottom-color: white !important;
+		}
+
+	.grid-item-7 .collapse-grid-container {
+		display: grid;
+		background-color: #bfdbea;
+		grid-template-columns: 15% 25% 12% 12% 12% 12% auto;
+		background-color: #e8f1f5;
+	}
+
+	.grid-item-7 .collapse-column-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		white-space: nowrap;
+		overflow: hidden;
+		border-left: 0.25vh solid;
+		border-left-color: #b4b4b4;
+		border-bottom: 0.25vh solid;
+		border-bottom-color: white;
+	}
+
+	.grid-item-7 .collapse-grid-container .collapse-column {
+		display: grid;
+		height: 10vh;
+		font-size: 2.5vh;
+	}
+
+	.grid-item-7 .collapse-grid-container .collapse-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.grid-item-7 .collapse-column-1 {
+		grid-template-columns: repeat(3,auto);
+		grid-template-rows: 1fr 1fr;
+	}
+
+		.grid-item-7 .collapse-column-1 .collapse-item-1-1 {
+			grid-column: 1/2;
+			grid-row: 1/ 2;
+			justify-content: end;
+			align-items: end;
+		}
+
+		.grid-item-7 .collapse-column-1 .collapse-item-1-2 {
+			grid-column: 1/2;
+			grid-row: 2/ 3;
+			justify-content: end;
+			align-items: start;
+		}
+
+		.grid-item-7 .collapse-column-1 .collapse-item-1-3 {
+			grid-column: 2/3;
+			grid-row: 2/ 3;
+		}
+
+		.grid-item-7 .collapse-column-1 .collapse-item-1-4 {
+			grid-column: 3/4;
+			grid-row: 1/ 3;
+			align-items: center;
+		}
+
+	.grid-item-7 .collapse-column-2 {
+		grid-template-columns: repeat(3,auto);
+		grid-template-rows: 1fr 1fr;
+	}
+
+		.grid-item-7 .collapse-column-2 .collapse-item-2-1 {
+			grid-column: 1/2;
+			grid-row: 1/ 2;
+			justify-content: start;
+			align-items: end;
+		}
+
+		.grid-item-7 .collapse-column-2 .collapse-item-2-2 {
+			grid-column: 1/2;
+			grid-row: 2/ 3;
+			justify-content: start;
+			align-items: start;
+		}
+
+		.grid-item-7 .collapse-column-2 .collapse-item-2-3 {
+			grid-column: 2/3;
+			grid-row: 1/ 3;
+		}
+
+		.grid-item-7 .collapse-column-2 .collapse-item-2-4 {
+			grid-column: 3/4;
+			grid-row: 1/ 3;
+		}
+
+	.grid-item-7 .collapse-column-3 {
+		grid-template-columns: repeat(3,auto);
+		grid-template-rows: 1fr 1fr;
+	}
+
+		.grid-item-7 .collapse-column-3 .collapse-item-3-1 {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			align-items: end;
+		}
+
+		.grid-item-7 .collapse-column-3 .collapse-item-3-2 {
+			grid-column: 2/3;
+			grid-row: 1/2;
+		}
+
+		.grid-item-7 .collapse-column-3 .collapse-item-3-3 {
+			grid-column: 3/4;
+			grid-row: 1/2;
+			justify-content: end;
+			align-items: end;
+			color: red;
+		}
+
+		.grid-item-7 .collapse-column-3 .collapse-item-3-4 {
+			grid-column: 3/4;
+			grid-row: 2/3;
+			justify-content: end;
+			align-items: start;
+			color: red;
+		}
+
+	.grid-item-7 .collapse-column-4 {
+		grid-template-columns: repeat(5,auto);
+		grid-template-rows: 1fr 1fr;
+	}
+
+		.grid-item-7 .collapse-column-4 .collapse-item-4-1 {
+			grid-column: 1/2;
+			grid-row: 1/ 2;
+			align-items: end;
+		}
+
+		.grid-item-7 .collapse-column-4 .collapse-item-4-2 {
+			grid-column: 2/3;
+			grid-row: 1/ 2;
+		}
+
+		.grid-item-7 .collapse-column-4 .collapse-item-4-3 {
+			grid-column: 3/4;
+			grid-row: 1/ 2;
+			align-items: end;
+		}
+
+		.grid-item-7 .collapse-column-4 .collapse-item-4-4 {
+			grid-column: 4/5;
+			grid-row: 1/ 2;
+		}
+
+		.grid-item-7 .collapse-column-4 .collapse-item-4-5 {
+			grid-column: 5/6;
+			grid-row: 1/ 2;
+			justify-content: end;
+			align-items: end;
+			color: red;
+		}
+
+		.grid-item-7 .collapse-column-4 .collapse-item-4-6 {
+			grid-column: 3/4;
+			grid-row: 2/ 3;
+			align-items: start;
+		}
+
+		.grid-item-7 .collapse-column-4 .collapse-item-4-7 {
+			grid-column: 4/5;
+			grid-row: 2/ 3;
+		}
+
+		.grid-item-7 .collapse-column-4 .collapse-item-4-8 {
+			grid-column: 5/6;
+			grid-row: 2/ 3;
+			color: red;
+			justify-content: end;
+			align-items: start;
+		}
+
+	.grid-item-7 .collapse-column-5 {
+		grid-template-columns: auto;
+		grid-template-rows: 1fr 1fr;
+	}
+
+		.grid-item-7 .collapse-column-5 .collapse-item-5-1 {
+			grid-column: 1/-1;
+			grid-row: 1/ 2;
+			justify-content: end;
+			color: red;
+			align-items: end;
+		}
+
+		.grid-item-7 .collapse-column-5 .collapse-item-5-2 {
+			grid-column: 1/-1;
+			grid-row: 2/ 3;
+			justify-content: end;
+			color: red;
+			align-items: start;
+		}
+
+	.grid-item-7 .collapse-column-6 {
+		grid-template-columns: repeat(3,auto);
+		grid-template-rows: 1fr 1fr;
+	}
+
+		.grid-item-7 .collapse-column-6 .collapse-item-6-1 {
+			grid-column: 1/2;
+			grid-row: 1/ 2;
+			align-items: end;
+		}
+
+		.grid-item-7 .collapse-column-6 .collapse-item-6-2 {
+			grid-column: 2/3;
+			grid-row: 1/ 2;
+		}
+
+		.grid-item-7 .collapse-column-6 .collapse-item-6-3 {
+			grid-column: 3/4;
+			grid-row: 1/ 2;
+			justify-content: end;
+			align-items: end;
+			color: red;
+		}
+
+		.grid-item-7 .collapse-column-6 .collapse-item-6-4 {
+			grid-column: 1/2;
+			grid-row: 2/ 3;
+			align-items: start;
+		}
+
+		.grid-item-7 .collapse-column-6 .collapse-item-6-5 {
+			grid-column: 2/3;
+			grid-row: 2/ 3;
+		}
+
+		.grid-item-7 .collapse-column-6 .collapse-item-6-6 {
+			grid-column: 3/4;
+			grid-row: 2/ 3;
+			justify-content: end;
+			align-items: start;
+			color: red;
+		}
